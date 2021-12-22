@@ -1,0 +1,13 @@
+
+source /nfs/hpc/share/nguyenkh/miniconda3/bin/activate
+conda activate deocclusion
+
+# python tools/convert_to_ann.py experiments/COCOA/pcnet_m_boundary_no_rgb/amodal_results/amodalcomp_train_thing_stuff_ours.json data/COCOA/annotations/COCO_amodal_train2014.json experiments/COCOA/pcnet_m_boundary_no_rgb/amodal_results/amodal_train2014_boundary_no_rgb_thing_stuff.json
+
+# python tools/convert_to_ann.py experiments/COCOA/pcnet_m_default_no_rgb/amodal_results/amodalcomp_train_thing_stuff_ours.json data/COCOA/annotations/COCO_amodal_train2014.json experiments/COCOA/pcnet_m_default_no_rgb/amodal_results/amodal_train2014_default_no_rgb_thing_stuff.json
+
+# python tools/convert_to_coco_json.py data/COCOA/annotations/COCO_amodal_val2014.json experiments/COCOA/pcnet_m_boundary_no_rgb/amodal_results/amodal_val2014_new.json
+# python tools/convert_to_coco_json.py data/COCOA/annotations/COCO_amodal_test2014.json experiments/COCOA/pcnet_m_boundary_no_rgb/amodal_results/amodal_test2014_new.json
+# python tools/convert_to_coco_json.py data/COCOA/annotations/COCO_amodal_train2014.json experiments/COCOA/pcnet_m_boundary_no_rgb/amodal_results/amodal_train2014_stuff_thing.json
+
+python tools/convert_to_ann.py experiments/KINS/pcnet_m_default_no_rgb/amodal_results/amodalcomp_train_ours.json data/KINS/instances_train.json experiments/KINS/pcnet_m_default_no_rgb/amodal_results/amodal_train_default_no_rgb.json
